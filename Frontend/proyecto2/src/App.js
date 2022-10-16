@@ -217,7 +217,7 @@ export default function App() {
         <DataTable
           columns={columnas}
           data={mySimbolos}
-          theme='custom'
+          theme='vs-dark'
           pagination
         />
       </div>
@@ -226,12 +226,12 @@ export default function App() {
         <DataTable
           columns={columnasErrores}
           data={myErrores}
-          theme='custom'
+          theme='vs-dark'
           pagination
         />
       </div>
       <div class="imgAst" id='imgAst'>
-        <div> <h2>AST</h2></div>
+        <div> <h2>Arbol AST</h2></div>
         < Graphviz
           dot={`digraph G {`+myAst+`
             }`}

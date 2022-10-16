@@ -4,7 +4,7 @@ const bodParser = require('body-parser')
 let cors = require('cors')
 
 const app = express()
-//const parser = require('./analizador')
+const parser = require('./analizador')
 
 app.use(bodParser.json({limit:'50mb', extended:true}))
 app.use(bodParser.urlencoded({limit:'50mb', extended:true}))
