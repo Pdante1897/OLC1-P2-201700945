@@ -19,6 +19,7 @@
 "print"                     {return 'print';}
 "println"                   {return 'println';}
 "while"                     {return 'while';}
+"until"                     {return 'until';}
 "for"                       {return 'for';}
 "do"                        {return 'do';}
 "break"                     {return 'break';}
@@ -147,6 +148,7 @@ OPCION: LLAMADAS ptcoma {$$=$1}
            | IF {$$=$1}
            | WHILE {$$=$1}
            | DOWHILE {$$=$1}
+           | DOUNTIL {$$=$1}
            | SWITCH {$$=$1}
            | FOR {$$=$1}
            | FUNCION {$$=$1}
@@ -277,6 +279,9 @@ CASE: case EXPRESION dpuntos OPCIONESCUERPO {$$ = new INSTRUCCION.nuevoCase($2,$
 ;
 
 DOWHILE: do llavea OPCIONESCUERPO llavec while parentesisa EXPRESION parentisisc ptcoma {$$ = new INSTRUCCION.nuevoDoWhile($7,$3,this._$.first_line,this._$.first_column+1)}
+;
+
+DOUNTIL: do llavea OPCIONESCUERPO llavec until parentesisa EXPRESION parentisisc ptcoma {$$ = new INSTRUCCION.nuevoDoUntil($7,$3,this._$.first_line,this._$.first_column+1)}
 ;
 
 WHILE: while parentesisa EXPRESION parentisisc llavea OPCIONESCUERPO llavec {$$ = new INSTRUCCION.nuevoWhile($3,$6,this._$.first_line,this._$.first_column+1)}

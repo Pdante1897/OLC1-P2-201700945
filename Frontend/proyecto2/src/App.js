@@ -31,11 +31,6 @@ export default function App() {
       center: true
     },
     {
-      name: 'ENTORNO',
-      selector: 'entorno',
-      center: true
-    },
-    {
       name: 'FILA',
       selector: 'fila',
       center: true

@@ -16,6 +16,7 @@ app.get('/',(req,res)=>{
     }
     res.send(respuesta)
 })
+const analizar = require('./Routes/analizar.routes')(parser, app)
 app.listen('4000', ()=>{
     console.log("Servidor en puerto 4000")
 })
