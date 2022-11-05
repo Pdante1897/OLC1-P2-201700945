@@ -1,0 +1,9 @@
+const TIPO = {
+    METODO: 'METODO',
+    VARIABLE: 'VARIABLE',
+    VECTOR: 'VECTOR',
+    VECTOR_2DIMENSIONES: 'VECTOR_2DIMENSIONES',
+    FUNCION: 'FUNCION'
+}
+
+module.exports = TIPO
